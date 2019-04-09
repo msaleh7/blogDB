@@ -1,25 +1,35 @@
 <html>
 
-<title>Login Form</title>
 
+<title>Login Page</title>
 
 
 <body>
 
-<h2>Login Form</h2>
-<form method = "POST" action = "loginHandler.php">
-<input type = "hidden" name = "submitted" value = "true"/>
+<h2>Login page</h2>
 
-<label>User Name: </label> <input type = "text" name = "username"/> <br />
-<label>Password:  </label> <input type = "text" name = "password"/> <br />
-
-<input type="submit" value = "Login"/> <br />
-
-<a href = "index.html">back to the home page</a> <br /> 
-
-</form>
+<form method = "POST" action = "posts.php">
+<input type="hidden" name ="submitted" value ="true"/>
 
 
+<table>
+
+<tr>
+<th><Lable>User ID:</th> <th></Lable><input type ="text" name ="uname" /> </th>
+
+</tr>
+
+<tr>
+<th><Lable>Password:</th> <th></Lable><input type ="text" name ="password" /> </th>
+
+</tr>
+
+
+
+
+</table>
+
+<input type = "submit"  value = "Login"/>
 </body>
 
 </html>
