@@ -1,9 +1,18 @@
+
+
+
+
 <?php
-$conn = mysqli_init();
-mysqli_ssl_set($conn,NULL,NULL, "C:/ssl/wwwdigicertcom.crt", NULL, NULL) ;
-mysqli_real_connect($conn, 'mysqldb7.mysql.database.azure.com', 'msaleh7', 'Msm@9810959', 'blogdb', 3306, MYSQLI_CLIENT_SSL);
-if (mysqli_connect_errno($conn)) {
-    die('Failed to connect: '.mysqli_connect_error());
+DEFINE ('DB_user', 'msaleh7');
+DEFINE ('DB_PWD', 'Msm@9810959');
+DEFINE ('DB_host', 'mysqldb7.mysql.database.azure.com');
+DEFINE ('DB_name', 'mysqldb7');
+
+$dbconn = mysqli_connect(DB_host,DB_user,DB_PWD,DB_name);
+
+if ($dbconn == false)
+{
+    die ("Could not connect. ". mysqli_connect_error());
 }
 
 ?>
